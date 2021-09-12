@@ -1,6 +1,6 @@
 {
   "name": "animechan.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "animechan.js utilizes the animechan API to return quotes from your favorite animes.",
   "main": "index.js",
   "types": "index.d.ts",
