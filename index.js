@@ -1,5 +1,5 @@
-const fetch = require("node-fetch");
 const _baseURL = "https://animechan.vercel.app/api";
+const axios = require("axios").default;
 module.exports = {
     /**
      * Get a random quote
@@ -10,13 +10,13 @@ module.exports = {
      */
     async Random() {
         const url = `${_baseURL}/random`;
-        const options = {
-            "method": "GET",
-            "headers": {
+        return axios({
+            method: "GET",
+            url: url,
+            headers: {
                 "Accept": "application/json"
             }
-        }
-        return fetch(url, options).then(data => data.json()).then((data) => {
+        }).then(({data}) => {
             return data;
         }).catch((err) => {throw new Error(err)});
     },
@@ -29,13 +29,13 @@ module.exports = {
      */
     async Get10RandomQuotes() {
         const url = `${_baseURL}/quotes`;
-        const options = {
-            "method": "GET",
-            "headers": {
+        return axios({
+            method: "GET",
+            url: url,
+            headers: {
                 "Accept": "application/json"
             }
-        }
-        return fetch(url, options).then(data => data.json()).then((data) => {
+        }).then(({data}) => {
             return data;
         }).catch((err) => {throw new Error(err)});
     },
@@ -50,13 +50,13 @@ module.exports = {
      */
     async GetQuotesByAnimeTitle(title, page) {
         const url = `${_baseURL}/quotes/anime?title=${encodeURI(title)}${(page) ? `&page=${page}`: ''}`;
-        const options = {
-            "method": "GET",
-            "headers": {
+        return axios({
+            method: "GET",
+            url: url,
+            headers: {
                 "Accept": "application/json"
             }
-        }
-        return fetch(url, options).then(data => data.json()).then((data) => {
+        }).then(({data}) => {
             return data;
         }).catch((err) => {throw new Error(err)});
     },
@@ -71,13 +71,13 @@ module.exports = {
      */
     async GetQuotesByCharacterName(name, page) {
         const url = `${_baseURL}/quotes/character?name=${encodeURI(name)}${(page) ? `&page=${page}`: ''}`;
-        const options = {
-            "method": "GET",
-            "headers": {
+        return axios({
+            method: "GET",
+            url: url,
+            headers: {
                 "Accept": "application/json"
             }
-        }
-        return fetch(url, options).then(data => data.json()).then((data) => {
+        }).then(({data}) => {
             return data;
         }).catch((err) => {throw new Error(err)});
     },
@@ -90,13 +90,13 @@ module.exports = {
      */
     async GetAvailableAnimeTitles() {
         const url = `${_baseURL}/available/anime`;
-        const options = {
-            "method": "GET",
-            "headers": {
+        return axios({
+            method: "GET",
+            url: url,
+            headers: {
                 "Accept": "application/json"
             }
-        }
-        return fetch(url, options).then(data => data.json()).then((data) => {
+        }).then(({data}) => {
             return data;
         }).catch((err) => {throw new Error(err)});
     }

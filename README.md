@@ -1,17 +1,17 @@
-# Animechan.js
- Animechan.js utilizes the animechan API to return quotes
+# animechan.js
+animechan.js utilizes the animechan API to return quotes from your favorite animes.
 
 # Installation
 ```bash
 npm i animechan.js
 ```
-
 # Usage
 ```javascript
 const {Random, Get10RandomQuotes, GetQuotesByAnimeTitle, GetQuotesByCharacterName, GetAvailableAnimeTitles} = require("animechan.js");
-Random().then(console.log);
-Get10RandomQuotes().then(console.log);
-GetQuotesByAnimeTitle("naruto", 1).then(console.log);
-GetQuotesByCharacterName("saitama", 1).then(console.log);
-GetAvailableAnimeTitles().then(console.log);
 ```
+
+# Documentation
+Function names are based on the [documentation](https://animechan.vercel.app/guide) all response types and function parameters are **1:1**
+
+# License
+animechan.js is Licensed under the [MIT License](https://github.com/MattPlays/Animechan.js/blob/main/LICENSE) 

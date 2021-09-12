@@ -1,7 +1,7 @@
 {
   "name": "animechan.js",
   "version": "1.0.0",
-  "description": "Animechan.js utilizes the animechan API to return quotes",
+  "description": "animechan.js utilizes the animechan API to return quotes from your favorite animes.",
   "main": "index.js",
   "types": "index.d.ts",
   "repository": {
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/MattPlays/Animechan.js#readme",
   "dependencies": {
-    "node-fetch": "^2.6.0"
+    "axios": "^0.21.4"
   }
 }
